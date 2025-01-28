@@ -1,0 +1,4 @@
+Courses[[:space:]]info2/* filter=lfs diff=lfs merge=lfs -text
+jsadjbasno/* filter=lfs diff=lfs merge=lfs -text
+Courses[[:space:]]info2/* filter=lfs diff=lfs merge=lfs -text
+chat_model/* filter=lfs diff=lfs merge=lfs -text
