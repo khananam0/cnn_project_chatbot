@@ -136,8 +136,8 @@ import requests
 import json
 from myproject.settings import SMS_BASE_URL
 def send_sms(mobile_no, otp):
-    # sms1 = SMS_BASE_URL.replace('{mobileno}', mobile_no)
-    # sms_url =sms1.replace('{message}', "This is the OTP for verification")
+    sms1 = SMS_BASE_URL.replace('{mobileno}', mobile_no)
+    sms_url =sms1.replace('{message}', "This is the OTP for verification")
 
     sms_url = SMS_BASE_URL.replace('{mobile_no}', mobile_no).replace('{otp}', otp)
     message = requests.request("GET", sms_url)

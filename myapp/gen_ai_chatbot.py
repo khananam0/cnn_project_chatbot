@@ -341,6 +341,7 @@ class PDFQuestionAnswering:
         """Ask a question and get an answer."""
         try:
             result = self.qa_chain({"query": question})
+            # result = self.qa_chain.invoke({"query": question})    
             answer = result['result']
             return {
                 'answer': answer.strip()

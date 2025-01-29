@@ -25,7 +25,8 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialize Firebase Admin SDK
-FIREBASE_CREDENTIALS = BASE_DIR / "freelancing-6b4b9-firebase-adminsdk-fbsvc-c42fac3c29.json"
+# FIREBASE_CREDENTIALS = BASE_DIR / "freelancing-6b4b9-firebase-adminsdk-fbsvc-c42fac3c29.json"
+FIREBASE_CREDENTIALS = os.getenv('FIREBASE_CREDENTIALS')
 cred = credentials.Certificate(str(FIREBASE_CREDENTIALS))  # Convert Path object to string
 firebase_admin.initialize_app(cred)
 
