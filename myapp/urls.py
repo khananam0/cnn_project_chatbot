@@ -8,8 +8,9 @@ from .views import (
                     TicketListAPIView, AssignedTicketListAPIView, 
                     ClosedTicketListAPIView, CloseTicketAPIView,
                     UpdateFCMTokenView, NotificationViewSet,
-                    CustomAuthToken, RoleInfoSet, DepartmentRoleView,
+                    RoleInfoSet, DepartmentRoleView,
                     ChatHistoryAPIView, AskQuestionView,UpdateViewTicketAPIView,
+                    # CustomAuthToken
                 )
 
 
@@ -44,11 +45,7 @@ urlpatterns = [
 
     path('update-fcm-token/', UpdateFCMTokenView.as_view(), name='update_fcm_token'),
 
-    path('api-token-auth/', CustomAuthToken.as_view(), name='api_token_auth'),
-
-
-
-
+    # path('api-token-auth/', CustomAuthToken.as_view(), name='api_token_auth'),
 
 
     path('', include(router.urls)),

@@ -1,23 +1,6 @@
 from firebase_admin import messaging
 from .models import Notification, CustomUser
 
-# def send_push_notification(fcm_token, title, body):
-#     # Create a message
-#     message = messaging.Message(
-#         notification=messaging.Notification(
-#             title=title,
-#             body=body,
-#         ),
-#         token=fcm_token,
-#     )
-
-#     # Send the message
-#     try:
-#         response = messaging.send(message)
-#         print("Successfully sent message:", response)
-#     except Exception as e:
-#         print("Error sending push notification:", str(e))
-
 def send_push_notification(fcm_token, ticket):
         print("===================")
         """

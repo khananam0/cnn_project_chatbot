@@ -132,6 +132,8 @@ class CourseDetailViewSet(viewsets.ModelViewSet):
 #     print(f"Sent OTP {otp} to {mobile_no}")
 
 
+
+
 import requests
 import json
 from myproject.settings import SMS_BASE_URL
@@ -324,11 +326,11 @@ class NotificationViewSet(viewsets.ModelViewSet):
     serializer_class = NotificationSerializer
 
 
-class CustomAuthToken(ObtainAuthToken):
-    def post(self, request, *args, **kwargs):
-        response = super(CustomAuthToken, self).post(request, *args, **kwargs)
-        token = Token.objects.get(key=response.data['token'])
-        return Response({'token': token.key, 'user_id': token.user_id, 'email': token.user.email})
+# class CustomAuthToken(ObtainAuthToken):
+#     def post(self, request, *args, **kwargs):
+#         response = super(CustomAuthToken, self).post(request, *args, **kwargs)
+#         token = Token.objects.get(key=response.data['token'])
+#         return Response({'token': token.key, 'user_id': token.user_id, 'email': token.user.email})
 
 
 """Chat implementation"""
